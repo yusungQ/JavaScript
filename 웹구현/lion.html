@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+
+    <script>
+        const canvas = document.querySelector('#canvas')
+
+        
+        const ctx = canvas.getContext('2d');
+
+        // x축, y축, 사각형의 너비, 높이
+        
+
+        ctx.fillRect(0, 0, 30, 120);
+        ctx.fillRect(30, 90, 60, 30);
+        ctx.fillRect(120, 0, 30, 120);
+        ctx.fillRect(330, 0, 30, 120);
+        ctx.fillRect(420, 0, 30, 120);
+
+        ctx.fillStyle = '#000';
+
+        ctx.beginPath();
+        ctx.strokeStyle = '#000';
+        ctx.lineWidth = 30;
+        // 원의 중심 x축, 원의 중신 y축, 원의 반지름 길이, 원의 시작 각도(기본 0), 원의 종료 각도
+        ctx.arc(240, 65 ,47 ,0, 3.14*2);
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.strokeStyle = "#000";
+        ctx.lineWidth = 30;
+        ctx.moveTo(360, 0);
+        ctx.lineTo(432, 111);
+        // 화면에 선을 그리겠다.
+        ctx.stroke();
+        
+
+
+    </script>
+
+</body>
+</html>
